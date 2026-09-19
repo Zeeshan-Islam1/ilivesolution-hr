@@ -1,0 +1,1598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    >
+
+    <title>iLiveSolution HR Reminder System</title>
+
+    <!-- ================= PWA ================= -->
+
+    <link rel="manifest" href="./manifest.json">
+
+    <meta
+        name="theme-color"
+        content="#2563eb"
+    >
+
+    <meta
+        name="mobile-web-app-capable"
+        content="yes"
+    >
+
+    <meta
+        name="apple-mobile-web-app-capable"
+        content="yes"
+    >
+
+    <meta
+        name="apple-mobile-web-app-status-bar-style"
+        content="default"
+    >
+
+    <meta
+        name="apple-mobile-web-app-title"
+        content="iLiveSolution HR"
+    >
+
+    <!-- ================= FAVICON ================= -->
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="./icons/icon-192.png"
+    >
+
+    <link
+        rel="apple-touch-icon"
+        href="./icons/icon-192.png"
+    >
+
+    <!-- ================= FONT ================= -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- ================= CSS ================= -->
+
+    <link
+        rel="stylesheet"
+        href="./hr.css"
+    >
+
+</head>
+
+
+<body>
+
+<div class="app">
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside class="sidebar">
+
+        <!-- BRAND -->
+
+        <div class="brand">
+
+            <div class="brand-mark">
+
+                <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    aria-hidden="true"
+                >
+                    <path
+                        d="M4 5.5A2.5 2.5 0 0 1 6.5 3h11A2.5 2.5 0 0 1 20 5.5v13a2.5 2.5 0 0 1-2.5 2.5h-11A2.5 2.5 0 0 1 4 18.5v-13Z"
+                    />
+
+                    <path
+                        d="M8 8h8M8 12h8M8 16h5"
+                    />
+                </svg>
+
+            </div>
+
+
+            <div>
+
+                <div class="brand-name">
+                    iLiveSolution
+                </div>
+
+                <div class="brand-subtitle">
+                    HR Reminder System
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- SIDEBAR LABEL -->
+
+        <div class="sidebar-label">
+            WORKSPACE
+        </div>
+
+
+        <!-- NAVIGATION -->
+
+        <nav class="navigation">
+
+            <!-- =================================================
+                 DASHBOARD
+            ================================================== -->
+
+            <div class="nav-group">
+
+                <button
+                    type="button"
+                    class="nav-parent"
+                    data-menu="dashboardMenu"
+                >
+
+                    <span class="nav-left">
+
+                        <span class="nav-icon">
+
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                aria-hidden="true"
+                            >
+                                <path
+                                    d="M4 13h6V4H4v9Zm10 7h6v-9h-6v9ZM4 20h6v-3H4v3Zm10-16v3h6V4h-6Z"
+                                />
+                            </svg>
+
+                        </span>
+
+                        <span>
+                            Dashboard
+                        </span>
+
+                    </span>
+
+
+                    <svg
+                        class="nav-arrow"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        aria-hidden="true"
+                    >
+                        <path
+                            d="m9 6 6 6-6 6"
+                        />
+                    </svg>
+
+                </button>
+
+
+                <div
+                    class="nav-submenu"
+                    id="dashboardMenu"
+                >
+
+                    <button
+                        type="button"
+                        class="submenu-btn active"
+                        data-page="dashboardSection"
+                        data-dashboard-filter="overview"
+                    >
+                        Overview
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="submenu-btn"
+                        data-page="remindersSection"
+                        data-dashboard-filter="today"
+                    >
+                        Due Today
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="submenu-btn"
+                        data-page="remindersSection"
+                        data-dashboard-filter="overdue"
+                    >
+                        Overdue
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 REMINDERS
+            ================================================== -->
+
+            <div class="nav-group">
+
+                <button
+                    type="button"
+                    class="nav-parent"
+                    data-menu="reminderMenu"
+                >
+
+                    <span class="nav-left">
+
+                        <span class="nav-icon">
+
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                aria-hidden="true"
+                            >
+                                <path
+                                    d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"
+                                />
+
+                                <path
+                                    d="M10 21h4"
+                                />
+
+                            </svg>
+
+                        </span>
+
+                        <span>
+                            Reminders
+                        </span>
+
+                    </span>
+
+
+                    <svg
+                        class="nav-arrow"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        aria-hidden="true"
+                    >
+                        <path
+                            d="m9 6 6 6-6 6"
+                        />
+                    </svg>
+
+                </button>
+
+
+                <div
+                    class="nav-submenu"
+                    id="reminderMenu"
+                >
+
+                    <button
+                        type="button"
+                        class="submenu-btn"
+                        data-page="remindersSection"
+                        data-reminder-view="all"
+                    >
+                        All Reminders
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="submenu-btn"
+                        data-page="remindersSection"
+                        data-reminder-view="pending"
+                    >
+                        Pending
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="submenu-btn"
+                        data-page="remindersSection"
+                        data-reminder-view="completed"
+                    >
+                        Completed
+                    </button>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+        <!-- SIDEBAR FOOTER -->
+
+        <div class="sidebar-footer">
+
+            <div class="sidebar-footer-line"></div>
+
+
+            <div class="system-status">
+
+                <span class="status-dot"></span>
+
+                <span>
+                    System Active
+                </span>
+
+            </div>
+
+
+            <div class="version">
+                iLiveSolution HR v1.0
+            </div>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+
+    <main class="main">
+
+
+        <!-- =================================================
+             TOPBAR
+        ================================================== -->
+
+        <header class="topbar">
+
+            <div class="topbar-title">
+
+                <h1 id="pageTitle">
+                    HR Dashboard
+                </h1>
+
+                <p>
+                    Manage your HR reminders and daily tasks
+                </p>
+
+            </div>
+
+
+            <div class="topbar-actions">
+
+
+                <!-- NOTIFICATION -->
+
+                <button
+                    type="button"
+                    class="icon-button notification-button"
+                    id="notificationBtn"
+                    title="Enable browser notifications"
+                    aria-label="Enable browser notifications"
+                >
+
+                    <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        aria-hidden="true"
+                    >
+                        <path
+                            d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"
+                        />
+
+                        <path
+                            d="M10 21h4"
+                        />
+
+                    </svg>
+
+
+                    <span
+                        class="notification-indicator"
+                        id="notificationIndicator"
+                    ></span>
+
+                </button>
+
+
+
+                <!-- THEME -->
+
+                <div class="theme-control">
+
+                    <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        aria-hidden="true"
+                    >
+                        <circle
+                            cx="12"
+                            cy="12"
+                            r="4"
+                        />
+
+                        <path
+                            d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"
+                        />
+                    </svg>
+
+
+                    <select id="themeSelect">
+
+                        <option value="system">
+                            System
+                        </option>
+
+                        <option value="light">
+                            Light
+                        </option>
+
+                        <option value="dark">
+                            Dark
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- ADD REMINDER -->
+
+                <button
+                    type="button"
+                    class="primary-button"
+                    id="addReminderBtn"
+                >
+
+                    <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        aria-hidden="true"
+                    >
+                        <path
+                            d="M12 5v14M5 12h14"
+                        />
+                    </svg>
+
+                    Add Reminder
+
+                </button>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =====================================================
+             DASHBOARD SECTION
+        ====================================================== -->
+
+        <section
+            class="page-section active"
+            id="dashboardSection"
+        >
+
+
+            <!-- WELCOME -->
+
+            <div class="welcome-row">
+
+                <div>
+
+                    <h2>
+                        HR Dashboard
+                    </h2>
+
+                    <p>
+                        Keep your important HR activities on schedule.
+                    </p>
+
+                </div>
+
+
+                <div class="today-chip">
+
+                    <span class="today-dot"></span>
+
+                    <span id="dashboardDate"></span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 STAT CARDS
+            ================================================== -->
+
+            <div class="stats-grid">
+
+
+                <!-- TOTAL -->
+
+                <div class="stat-card">
+
+                    <div class="stat-icon blue">
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            aria-hidden="true"
+                        >
+                            <path
+                                d="M6 3h12v18H6z"
+                            />
+
+                            <path
+                                d="M9 7h6M9 11h6M9 15h4"
+                            />
+
+                        </svg>
+
+                    </div>
+
+
+                    <div>
+
+                        <div class="stat-label">
+                            Total Reminders
+                        </div>
+
+                        <div
+                            class="stat-value"
+                            id="totalReminders"
+                        >
+                            0
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PENDING -->
+
+                <div class="stat-card">
+
+                    <div class="stat-icon amber">
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            aria-hidden="true"
+                        >
+                            <circle
+                                cx="12"
+                                cy="12"
+                                r="8"
+                            />
+
+                            <path
+                                d="M12 8v4l3 2"
+                            />
+
+                        </svg>
+
+                    </div>
+
+
+                    <div>
+
+                        <div class="stat-label">
+                            Pending
+                        </div>
+
+                        <div
+                            class="stat-value"
+                            id="pendingReminders"
+                        >
+                            0
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- TODAY -->
+
+                <div class="stat-card">
+
+                    <div class="stat-icon green">
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            aria-hidden="true"
+                        >
+                            <rect
+                                x="4"
+                                y="5"
+                                width="16"
+                                height="15"
+                                rx="2"
+                            />
+
+                            <path
+                                d="M8 3v4M16 3v4M4 10h16"
+                            />
+
+                        </svg>
+
+                    </div>
+
+
+                    <div>
+
+                        <div class="stat-label">
+                            Due Today
+                        </div>
+
+                        <div
+                            class="stat-value"
+                            id="todayReminders"
+                        >
+                            0
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- OVERDUE -->
+
+                <div class="stat-card">
+
+                    <div class="stat-icon red">
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            aria-hidden="true"
+                        >
+                            <circle
+                                cx="12"
+                                cy="12"
+                                r="8"
+                            />
+
+                            <path
+                                d="M12 8v5M12 16h.01"
+                            />
+
+                        </svg>
+
+                    </div>
+
+
+                    <div>
+
+                        <div class="stat-label">
+                            Overdue
+                        </div>
+
+                        <div
+                            class="stat-value"
+                            id="overdueReminders"
+                        >
+                            0
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 DASHBOARD CONTENT
+            ================================================== -->
+
+            <div class="dashboard-grid">
+
+
+                <!-- UPCOMING -->
+
+                <div class="panel upcoming-panel">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <h3>
+                                Upcoming Reminders
+                            </h3>
+
+                            <p>
+                                Your next scheduled HR activities
+                            </p>
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            class="text-button"
+                            id="viewAllBtn"
+                        >
+                            View All
+                        </button>
+
+                    </div>
+
+
+                    <div
+                        class="upcoming-list"
+                        id="upcomingList"
+                    ></div>
+
+                </div>
+
+
+
+                <!-- QUICK ACTIONS -->
+
+                <div class="panel quick-panel">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <h3>
+                                Quick Actions
+                            </h3>
+
+                            <p>
+                                Create a reminder instantly
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="quick-actions">
+
+
+                        <!-- EMPLOYEE -->
+
+                        <button
+                            type="button"
+                            class="quick-action"
+                            data-quick-action="employee"
+                        >
+
+                            <span class="quick-icon blue">
+
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    aria-hidden="true"
+                                >
+                                    <circle
+                                        cx="12"
+                                        cy="8"
+                                        r="3"
+                                    />
+
+                                    <path
+                                        d="M5 20c0-4 2.5-6 7-6s7 2 7 6"
+                                    />
+
+                                </svg>
+
+                            </span>
+
+
+                            <span>
+
+                                <strong>
+                                    Employee Reminder
+                                </strong>
+
+                                <small>
+                                    Set a reminder for an employee
+                                </small>
+
+                            </span>
+
+
+                            <svg
+                                class="quick-arrow"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                aria-hidden="true"
+                            >
+                                <path
+                                    d="m9 6 6 6-6 6"
+                                />
+                            </svg>
+
+                        </button>
+
+
+
+                        <!-- HR TASK -->
+
+                        <button
+                            type="button"
+                            class="quick-action"
+                            data-quick-action="task"
+                        >
+
+                            <span class="quick-icon purple">
+
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    aria-hidden="true"
+                                >
+                                    <path
+                                        d="M6 3h12v18H6z"
+                                    />
+
+                                    <path
+                                        d="M9 8h6M9 12h6M9 16h4"
+                                    />
+
+                                </svg>
+
+                            </span>
+
+
+                            <span>
+
+                                <strong>
+                                    HR Task
+                                </strong>
+
+                                <small>
+                                    Create a general HR task
+                                </small>
+
+                            </span>
+
+
+                            <svg
+                                class="quick-arrow"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                aria-hidden="true"
+                            >
+                                <path
+                                    d="m9 6 6 6-6 6"
+                                />
+                            </svg>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 DUE NOW
+            ================================================== -->
+
+            <div
+                class="due-now-card"
+                id="dueNowCard"
+            >
+
+                <div class="due-now-icon">
+
+                    <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        aria-hidden="true"
+                    >
+                        <path
+                            d="M12 3v9l6 3"
+                        />
+
+                        <circle
+                            cx="12"
+                            cy="12"
+                            r="9"
+                        />
+
+                    </svg>
+
+                </div>
+
+
+                <div class="due-now-content">
+
+                    <strong id="dueNowTitle">
+                        Reminder Due
+                    </strong>
+
+                    <span id="dueNowDescription">
+                        A reminder is due now.
+                    </span>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="secondary-button"
+                    id="stopAlarmBtn"
+                >
+                    Stop Alarm
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             REMINDERS SECTION
+        ====================================================== -->
+
+        <section
+            class="page-section"
+            id="remindersSection"
+        >
+
+
+            <!-- SECTION HEADER -->
+
+            <div class="section-heading">
+
+                <div>
+
+                    <h2>
+                        Reminders
+                    </h2>
+
+                    <p>
+                        Manage all employee reminders and HR tasks.
+                    </p>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="primary-button"
+                    id="addReminderBtn2"
+                >
+
+                    <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        aria-hidden="true"
+                    >
+                        <path
+                            d="M12 5v14M5 12h14"
+                        />
+                    </svg>
+
+                    Add Reminder
+
+                </button>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 FILTER BAR
+            ================================================== -->
+
+            <div class="filter-bar">
+
+
+                <!-- SEARCH -->
+
+                <div class="search-box">
+
+                    <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        aria-hidden="true"
+                    >
+                        <circle
+                            cx="11"
+                            cy="11"
+                            r="7"
+                        />
+
+                        <path
+                            d="m16 16 5 5"
+                        />
+
+                    </svg>
+
+
+                    <input
+                        type="search"
+                        id="searchInput"
+                        placeholder="Search reminders, employees..."
+                        autocomplete="off"
+                    >
+
+                </div>
+
+
+
+                <!-- STATUS -->
+
+                <select id="statusFilter">
+
+                    <option value="all">
+                        All Status
+                    </option>
+
+                    <option value="pending">
+                        Pending
+                    </option>
+
+                    <option value="overdue">
+                        Overdue
+                    </option>
+
+                    <option value="completed">
+                        Completed
+                    </option>
+
+                </select>
+
+
+
+                <!-- DEPARTMENT -->
+
+                <select id="departmentFilter">
+
+                    <option value="all">
+                        All Departments
+                    </option>
+
+                </select>
+
+
+
+                <!-- EXPORT -->
+
+                <button
+                    type="button"
+                    class="secondary-button export-button"
+                    id="exportCsvBtn"
+                >
+
+                    <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        aria-hidden="true"
+                    >
+                        <path
+                            d="M12 3v12"
+                        />
+
+                        <path
+                            d="m7 10 5 5 5-5"
+                        />
+
+                        <path
+                            d="M5 21h14"
+                        />
+
+                    </svg>
+
+                    Export CSV
+
+                </button>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 TABLE
+            ================================================== -->
+
+            <div class="table-panel">
+
+                <div class="table-wrapper">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    Reminder
+                                </th>
+
+                                <th>
+                                    Type
+                                </th>
+
+                                <th>
+                                    Employee
+                                </th>
+
+                                <th>
+                                    Department
+                                </th>
+
+                                <th>
+                                    Date
+                                </th>
+
+                                <th>
+                                    Time
+                                </th>
+
+                                <th>
+                                    Status
+                                </th>
+
+                                <th>
+                                    Actions
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="remindersTableBody"></tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+
+<!-- =========================================================
+     REMINDER MODAL
+========================================================== -->
+
+<div
+    class="modal-overlay"
+    id="reminderModal"
+    aria-hidden="true"
+>
+
+    <div
+        class="modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modalTitle"
+    >
+
+
+        <!-- MODAL HEADER -->
+
+        <div class="modal-header">
+
+            <div>
+
+                <h3 id="modalTitle">
+                    Add Reminder
+                </h3>
+
+                <p>
+                    Create a new HR reminder.
+                </p>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="modal-close"
+                id="closeModalBtn"
+                aria-label="Close"
+            >
+
+                <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    aria-hidden="true"
+                >
+                    <path
+                        d="m6 6 12 12M18 6 6 18"
+                    />
+                </svg>
+
+            </button>
+
+        </div>
+
+
+
+        <!-- FORM -->
+
+        <form id="reminderForm">
+
+            <input
+                type="hidden"
+                id="reminderId"
+            >
+
+
+
+            <!-- REMINDER TYPE -->
+
+            <div class="form-section">
+
+                <label class="form-label">
+                    Reminder Type
+                </label>
+
+
+                <div class="type-options">
+
+
+                    <!-- EMPLOYEE -->
+
+                    <label class="type-option">
+
+                        <input
+                            type="radio"
+                            name="reminderType"
+                            value="employee"
+                            checked
+                        >
+
+                        <span class="radio-custom"></span>
+
+
+                        <span>
+
+                            <strong>
+                                Employee Reminder
+                            </strong>
+
+                            <small>
+                                Related to a specific employee
+                            </small>
+
+                        </span>
+
+                    </label>
+
+
+
+                    <!-- HR TASK -->
+
+                    <label class="type-option">
+
+                        <input
+                            type="radio"
+                            name="reminderType"
+                            value="task"
+                        >
+
+                        <span class="radio-custom"></span>
+
+
+                        <span>
+
+                            <strong>
+                                HR Task
+                            </strong>
+
+                            <small>
+                                General HR activity
+                            </small>
+
+                        </span>
+
+                    </label>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 EMPLOYEE FIELDS
+            ================================================== -->
+
+            <div
+                class="employee-fields"
+                id="employeeFields"
+            >
+
+                <div class="form-grid">
+
+
+                    <!-- NAME -->
+
+                    <div class="form-group">
+
+                        <label for="employeeName">
+                            Employee Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="employeeName"
+                            placeholder="Enter employee name"
+                            autocomplete="off"
+                        >
+
+                    </div>
+
+
+
+                    <!-- EMPLOYEE ID -->
+
+                    <div class="form-group">
+
+                        <label for="employeeId">
+                            Employee ID
+                        </label>
+
+                        <input
+                            type="text"
+                            id="employeeId"
+                            placeholder="e.g. IR-00254-05"
+                            autocomplete="off"
+                        >
+
+                    </div>
+
+
+
+                    <!-- DEPARTMENT -->
+
+                    <div class="form-group full-width">
+
+                        <label for="department">
+                            Department
+                        </label>
+
+                        <input
+                            type="text"
+                            id="department"
+                            placeholder="Enter department"
+                            autocomplete="off"
+                        >
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 REMINDER DETAILS
+            ================================================== -->
+
+            <div class="form-grid">
+
+
+                <!-- REMINDER -->
+
+                <div class="form-group full-width">
+
+                    <label for="reminderText">
+                        Reminder / Task
+                    </label>
+
+                    <input
+                        type="text"
+                        id="reminderText"
+                        placeholder="Enter reminder or HR task"
+                        required
+                        autocomplete="off"
+                    >
+
+                </div>
+
+
+
+                <!-- DATE -->
+
+                <div class="form-group">
+
+                    <label for="reminderDate">
+                        Date
+                    </label>
+
+                    <input
+                        type="date"
+                        id="reminderDate"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- TIME -->
+
+                <div class="form-group">
+
+                    <label for="reminderTime">
+                        Time
+                    </label>
+
+                    <input
+                        type="time"
+                        id="reminderTime"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- NOTES -->
+
+                <div class="form-group full-width">
+
+                    <label for="reminderNotes">
+                        Notes
+                    </label>
+
+                    <textarea
+                        id="reminderNotes"
+                        rows="4"
+                        placeholder="Optional notes..."
+                    ></textarea>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- MODAL FOOTER -->
+
+            <div class="modal-footer">
+
+                <button
+                    type="button"
+                    class="secondary-button"
+                    id="cancelModalBtn"
+                >
+                    Cancel
+                </button>
+
+
+                <button
+                    type="submit"
+                    class="primary-button"
+                >
+
+                    Save Reminder
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     TOAST
+========================================================== -->
+
+<div
+    class="toast"
+    id="toast"
+    role="status"
+    aria-live="polite"
+>
+
+    <div class="toast-icon">
+
+        <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            aria-hidden="true"
+        >
+            <path
+                d="m5 12 4 4L19 6"
+            />
+        </svg>
+
+    </div>
+
+
+    <div>
+
+        <strong id="toastTitle">
+            Success
+        </strong>
+
+        <span id="toastMessage">
+            Done.
+        </span>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================== -->
+
+<script src="./script.js"></script>
+
+
+<!-- =========================================================
+     SERVICE WORKER / PWA
+========================================================== -->
+
+<script>
+    if ("serviceWorker" in navigator) {
+
+        window.addEventListener("load", function () {
+
+            navigator.serviceWorker
+                .register("./sw.js")
+                .then(function () {
+
+                    console.log(
+                        "iLiveSolution HR Service Worker registered successfully."
+                    );
+
+                })
+                .catch(function (error) {
+
+                    console.error(
+                        "Service Worker registration failed:",
+                        error
+                    );
+
+                });
+
+        });
+
+    }
+</script>
+
+
+</body>
+</html>
